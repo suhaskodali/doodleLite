@@ -2176,3 +2176,315 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/home" for 32.212.173.81 at 2018-11-25 21:07:43 +0000
+Cannot render console from 32.212.173.81! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 32.212.173.81 at 2018-11-25 21:07:49 +0000
+Cannot render console from 32.212.173.81! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 41ms (Views: 36.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1" for 32.212.173.81 at 2018-11-25 21:07:52 +0000
+Cannot render console from 32.212.173.81! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `microposts' for #<User:0x007f33cdfb3440>):
+    16: </p>
+    17: 
+    18:   <div class="col-md-8">
+    19:     <% if @user.microposts.any? %>
+    20:       <h3>Microposts (<%= @user.microposts.count %>)</h3>
+    21:       <ol class="microposts">
+    22:         <%= render @microposts %>
+  
+app/views/users/show.html.erb:19:in `_app_views_users_show_html_erb__2411985685228836280_69930237922500'
+Started GET "/users/1" for 32.212.173.81 at 2018-11-25 21:08:40 +0000
+Cannot render console from 32.212.173.81! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPoll Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "polls" WHERE "polls"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:19
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:20
+  Rendered users/show.html.erb within layouts/application (27.5ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    19:     <% if @user.polls.any? %>
+    20:       <h3>Polls (<%= @user.polls.count %>)</h3>
+    21:       <ol class="polls">
+    22:         <%= render @polls %>
+    23:       </ol>
+    24:       <%= will_paginate @polls %>
+    25:     <% end %>
+  
+app/views/users/show.html.erb:22:in `_app_views_users_show_html_erb__2411985685228836280_69930233138280'
+Started GET "/users/1" for 32.212.173.81 at 2018-11-25 21:13:19 +0000
+Cannot render console from 32.212.173.81! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:69
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.9ms)
+
+
+  
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/extensions.rb:28
+NoMethodError (undefined method `paginate' for #<Poll::ActiveRecord_Associations_CollectionProxy:0x007f33cd677700>):
+  
+app/controllers/users_controller.rb:14:in `show'
+Started GET "/users/1" for 32.212.173.81 at 2018-11-25 21:19:18 +0000
+Cannot render console from 32.212.173.81! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:69
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPoll Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "polls" WHERE "polls"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:19
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:22
+  Rendered collection of polls/_poll.html.erb [1 times] (4.5ms)
+  Rendered users/show.html.erb within layouts/application (15.1ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `user' for #<Poll:0x007f33cd015ab0>
+Did you mean?  user_id):
+    1: <li id="poll-<%= poll.id %>">
+    2:   <span class="user"><%= link_to poll.user.name, poll.user %></span>
+    3:   <span class="title"><%= poll.title %></span>
+    4:   <span class="description"><%= poll.description %></span>
+    5:   <span class="user_id"><%= poll.user_id %></span>
+  
+app/views/polls/_poll.html.erb:2:in `_app_views_polls__poll_html_erb__3242934649866623955_69930229714840'
+app/views/users/show.html.erb:22:in `_app_views_users_show_html_erb__2411985685228836280_69930230615780'
+Started GET "/users/1" for 32.212.173.81 at 2018-11-25 21:20:30 +0000
+Cannot render console from 32.212.173.81! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:69
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPoll Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "polls" WHERE "polls"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:19
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:22
+  Rendered collection of polls/_poll.html.erb [1 times] (2.4ms)
+  Rendered users/show.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for 1:Integer):
+    1: <li id="poll-<%= poll.id %>">
+    2:   <span class="user"><%= link_to poll.user_id.name, poll.user_id %></span>
+    3:   <span class="title"><%= poll.title %></span>
+    4:   <span class="description"><%= poll.description %></span>
+    5:   <span class="user_id"><%= poll.user_id %></span>
+  
+app/views/polls/_poll.html.erb:2:in `_app_views_polls__poll_html_erb__3242934649866623955_69930229537700'
+app/views/users/show.html.erb:22:in `_app_views_users_show_html_erb__2411985685228836280_69930229917440'
+Started GET "/users/1" for 32.212.173.81 at 2018-11-25 21:20:57 +0000
+Cannot render console from 32.212.173.81! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:69
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPoll Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "polls" WHERE "polls"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:19
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:22
+  Rendered collection of polls/_poll.html.erb [1 times] (3.2ms)
+  Rendered users/show.html.erb within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `to_model' for 1:Integer
+Did you mean?  to_yaml):
+    1: <li id="poll-<%= poll.id %>">
+    2:   <span class="user"><%= link_to poll.user_id, poll.user_id %></span>
+    3:   <span class="title"><%= poll.title %></span>
+    4:   <span class="description"><%= poll.description %></span>
+    5:   <span class="user_id"><%= poll.user_id %></span>
+  
+app/views/polls/_poll.html.erb:2:in `_app_views_polls__poll_html_erb__3242934649866623955_69930229740660'
+app/views/users/show.html.erb:22:in `_app_views_users_show_html_erb__2411985685228836280_69930230126860'
+Started GET "/users/1" for 32.212.173.81 at 2018-11-25 21:21:22 +0000
+Cannot render console from 32.212.173.81! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:69
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPoll Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "polls" WHERE "polls"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:19
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:22
+  Rendered collection of polls/_poll.html.erb [1 times] (0.7ms)
+  Rendered users/show.html.erb within layouts/application (117.0ms)
+Completed 500 Internal Server Error in 122ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `will_paginate' for #<#<Class:0x007f33cd1c1530>:0x007f33cce87f90>):
+    21:       <ol class="polls">
+    22:         <%= render @polls %>
+    23:       </ol>
+    24:       <%= will_paginate @polls %>
+    25:     <% end %>
+    26:   </div>
+    27: 
+  
+app/views/users/show.html.erb:24:in `_app_views_users_show_html_erb__2411985685228836280_69930228944020'
+Started GET "/users/1" for 32.212.173.81 at 2018-11-25 21:21:55 +0000
+Cannot render console from 32.212.173.81! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:69
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPoll Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "polls" WHERE "polls"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:19
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:22
+  Rendered collection of polls/_poll.html.erb [1 times] (0.6ms)
+  Rendered users/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 42ms (Views: 37.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/polls" for 32.212.173.81 at 2018-11-25 21:22:09 +0000
+Cannot render console from 32.212.173.81! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  ↳ app/views/polls/index.html.erb:16
+  Rendered polls/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/polls/new" for 32.212.173.81 at 2018-11-25 21:22:15 +0000
+Cannot render console from 32.212.173.81! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (3.0ms)
+  Rendered polls/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 59ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/polls" for 32.212.173.81 at 2018-11-25 21:22:27 +0000
+Cannot render console from 32.212.173.81! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uiE9TxSzzB02FKY+3qqJZJ+u6QHkeqnM2cv6I30qATkjNwkSsjKmVpZoQtlG2bP5kNi7FfcEwsePGSe384I/4g==", "poll"=>{"title"=>"second_by_1", "description"=>"test2", "user_id"=>"1"}, "commit"=>"Create Poll"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/polls_controller.rb:30
+  [1m[36mPoll Create (1.9ms)[0m  [1m[32mINSERT INTO "polls" ("title", "description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "second_by_1"], ["description", "test2"], ["user_id", 1], ["created_at", "2018-11-25 21:22:27.763986"], ["updated_at", "2018-11-25 21:22:27.763986"]]
+  ↳ app/controllers/polls_controller.rb:30
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/polls_controller.rb:30
+Redirected to https://b051368cc6304bbfba473f46cdb127e0.vfs.cloud9.us-east-1.amazonaws.com/polls/2
+Completed 302 Found in 15ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/polls/2" for 32.212.173.81 at 2018-11-25 21:22:27 +0000
+Cannot render console from 32.212.173.81! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:67
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 59ms (Views: 55.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/polls" for 32.212.173.81 at 2018-11-25 21:22:30 +0000
+Cannot render console from 32.212.173.81! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  ↳ app/views/polls/index.html.erb:16
+  Rendered polls/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 32.212.173.81 at 2018-11-25 21:22:32 +0000
+Cannot render console from 32.212.173.81! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 32.212.173.81 at 2018-11-25 21:22:36 +0000
+Cannot render console from 32.212.173.81! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:69
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPoll Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "polls" WHERE "polls"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:19
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:22
+  Rendered collection of polls/_poll.html.erb [2 times] (0.7ms)
+  Rendered users/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 38ms (Views: 34.2ms | ActiveRecord: 0.5ms)
+
+

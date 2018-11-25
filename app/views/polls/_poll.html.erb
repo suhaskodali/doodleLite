@@ -1,0 +1,11 @@
+<li id="poll-<%= poll.id %>">
+  
+  <span class="title"><%= poll.title %></span>
+  <span class="description"><%= poll.description %></span>
+  <span class="user_id"><%= poll.user_id %></span>
+
+
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(poll.created_at) %> ago.
+  </span>
+</li>
