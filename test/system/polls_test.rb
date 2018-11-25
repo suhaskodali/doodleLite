@@ -16,6 +16,7 @@ class PollsTest < ApplicationSystemTestCase
 
     fill_in "Description", with: @poll.description
     fill_in "Title", with: @poll.title
+    fill_in "User", with: @poll.user_id
     click_on "Create Poll"
 
     assert_text "Poll was successfully created"
@@ -28,6 +29,7 @@ class PollsTest < ApplicationSystemTestCase
 
     fill_in "Description", with: @poll.description
     fill_in "Title", with: @poll.title
+    fill_in "User", with: @poll.user_id
     click_on "Update Poll"
 
     assert_text "Poll was successfully updated"

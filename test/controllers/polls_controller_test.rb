@@ -17,7 +17,7 @@ class PollsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create poll" do
     assert_difference('Poll.count') do
-      post polls_url, params: { poll: { description: @poll.description, title: @poll.title } }
+      post polls_url, params: { poll: { description: @poll.description, title: @poll.title, user_id: @poll.user_id } }
     end
 
     assert_redirected_to poll_url(Poll.last)
@@ -34,7 +34,7 @@ class PollsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update poll" do
-    patch poll_url(@poll), params: { poll: { description: @poll.description, title: @poll.title } }
+    patch poll_url(@poll), params: { poll: { description: @poll.description, title: @poll.title, user_id: @poll.user_id } }
     assert_redirected_to poll_url(@poll)
   end
 

@@ -3,6 +3,7 @@ class CreatePolls < ActiveRecord::Migration[5.2]
     create_table :polls do |t|
       t.text :title
       t.text :description
+      t.integer :user_id
 
       t.timestamps
     end

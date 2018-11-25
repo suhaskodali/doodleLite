@@ -3,7 +3,9 @@
 one:
   title: MyText
   description: MyText
+  user_id: 1
 
 two:
   title: MyText
   description: MyText
+  user_id: 1
