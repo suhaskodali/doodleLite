@@ -11,19 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="name">
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
 
-  <div class="field">
+  <div class="email">
     <%= form.label :email %>
     <%= form.text_field :email %>
   </div>
 
-  <div class="field">
+  <div class="password">
     <%= form.label :password %>
-    <%= form.text_field :password %>
+    <%= form.password_field :password %>
+  </div>
+
+  <div class="passwordConfirmation">
+    <%= form.label :password_confirmation, 'Password Confirmation' %>
+    <%= form.password_field :password_confirmation %>
   </div>
 
   <div class="actions">
