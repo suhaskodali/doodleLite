@@ -15,5 +15,11 @@
   <%= @poll.user_id %>
 </p>
 
+<p>
+  <strong>Total Number of Votes:</strong>
+  <%= @poll.totalVotes %>
+</p>
+
+
 <%= link_to 'Edit', edit_poll_path(@poll) %> |
 <%= link_to 'Back', polls_path %>
