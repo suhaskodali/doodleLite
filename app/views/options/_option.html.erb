@@ -1,0 +1,11 @@
+<li id="option-<%= option.id %>">
+  
+  <span class="poll_id"><%= option.poll_id %></span>
+  <span class="name"><%= option.name %></span>
+  <span class="numVotes"><%= option.numVotes %></span>
+
+
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(option.created_at) %> ago.
+  </span>
+</li>

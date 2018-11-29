@@ -20,6 +20,16 @@
   <%= @poll.totalVotes %>
 </p>
 
+  <div class="col-md-8">
+    <% if @poll.options.any? %>
+      <h3>Options (<%= @poll.options.count %>)</h3>
+      <ol class="options">
+        <%= render @options %>  
+      </ol>
+ 
+    <% end %>
+  </div>
+
 
 <%= link_to 'Edit', edit_poll_path(@poll) %> |
 <%= link_to 'Back', polls_path %>
