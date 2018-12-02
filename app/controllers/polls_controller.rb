@@ -10,6 +10,9 @@ class PollsController < ApplicationController
   # GET /polls/1
   # GET /polls/1.json
   def show
+    @poll = Poll.find(params[:id])
+    @options = @poll.options
+    @new_option = Option.new(poll_id: @poll.id)
   end
 
   # GET /polls/new

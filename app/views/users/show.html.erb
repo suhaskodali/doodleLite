@@ -15,15 +15,28 @@
   <%= @user.password %>
 </p>
 
-  <div class="col-md-8">
-    <% if @user.polls.any? %>
-      <h3>Polls (<%= @user.polls.count %>)</h3>
-      <ol class="polls">
-        <%= render @polls %>
-      </ol>
- 
+<h2>Your Polls</h2>
+<table width="100%" border="1">
+  <thead>
+    <tr>
+      <th width="25%">Polls</th>
+      <th width="25%">Description</th>
+      <th width="25%">Total Votes</th>
+      <th width="25%"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @user.polls.each do |poll| %>
+      <tr>
+          <td><%= poll.title %></td>
+          <td><%= poll.description %></td>
+          <td><%= poll.totalVotes %></td>
+          <td><%= link_to 'Show', poll %></td>
+      </tr>
     <% end %>
-  </div>
+  </tbody>
+</table>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
