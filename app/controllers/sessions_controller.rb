@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+
   def new
   end
 
@@ -11,6 +12,14 @@ class SessionsController < ApplicationController
     else
       flash.now[:danger] = 'Invalid email/password combination'
       render 'new'
+    end
+  end
+
+  def search
+    email = params[:search] + '%'
+    @users = User.where(['email LIKE ?', email])
+    respond_to do |format|
+      format.js
     end
   end
 
