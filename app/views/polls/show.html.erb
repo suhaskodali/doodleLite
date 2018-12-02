@@ -20,7 +20,10 @@
   <%= @poll.totalVotes %>
 </p>
 
-  <div class="col-md-8">
+<%= link_to 'Edit', edit_poll_path(@poll) %> |
+<%= link_to 'Back', polls_path %>
+
+  <div class="col-md-12">
     <% if @poll.options.any? %>
       <h3>Options (<%= @poll.options.count %>)</h3>
       <ol class="options">
@@ -29,7 +32,45 @@
  
     <% end %>
   </div>
+  
+<h2>Your Poll's Options</h2>
+
+<table width="100%" border="1">
+  <thead>
+    <tr>
+      <th width="25%">Name</th>
+      <th width="25%">Number of Votes</th>
+      <th width="50%"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @poll.options.each do |option| %>
+      <tr>
+          <td><%= option.name %></td>
+          <td><%= option.numVotes %></td>
+          <td><%= link_to 'Show', option %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h1>Add a new option</h1>
+<%= form_with(model: @new_option, local: true) do |form| %>
+  <%= hidden_field_tag('option[poll_id]', @poll.id) %>
+  <%= hidden_field_tag('option[numVotes]', 0) %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :option_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
 
 
-<%= link_to 'Edit', edit_poll_path(@poll) %> |
-<%= link_to 'Back', polls_path %>
+
+
+

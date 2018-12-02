@@ -26,14 +26,21 @@ class OptionsController < ApplicationController
   # POST /options.json
   def create
     @option = Option.new(option_params)
-
-    respond_to do |format|
-      if @option.save
-        format.html { redirect_to @option, notice: 'Option was successfully created.' }
-        format.json { render :show, status: :created, location: @option }
-      else
-        format.html { render :new }
-        format.json { render json: @option.errors, status: :unprocessable_entity }
+    
+    # The if statement isn't working very well
+    if !params[:add_option].nil?
+      @option.save
+      flash[:success] = 'Option added!'
+      redirect_to @option.poll    
+    else
+      respond_to do |format|
+        if @option.save
+          format.html { redirect_to @option.poll, notice: 'Option was successfully created.' }
+          format.json { render :show, status: :created, location: @option }
+        else
+          format.html { render :new }
+          format.json { render json: @option.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
