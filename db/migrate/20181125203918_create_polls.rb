@@ -4,6 +4,7 @@ class CreatePolls < ActiveRecord::Migration[5.2]
       t.text :title
       t.text :description
       t.integer :user_id
+      t.integer :totalVotes
 
       t.timestamps
     end
