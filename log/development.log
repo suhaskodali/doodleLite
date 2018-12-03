@@ -9409,3 +9409,615 @@ Processing by PollsController#index as HTML
 Completed 200 OK in 49ms (Views: 43.9ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/polls" for 127.0.0.1 at 2018-12-02 21:01:01 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PollsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  ↳ app/views/polls/index.html.erb:16
+  Rendered polls/index.html.erb within layouts/application (254.6ms)
+Completed 500 Internal Server Error in 302ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `correct_user' for #<#<Class:0x00007fa853d41fe0>:0x00007fa8530ae9e0>
+Did you mean?  current_user
+               @current_user):
+    19:         <td><%= poll.description %></td>
+    20:         <td><%= poll.user_id %></td>
+    21:         <td><%= poll.totalVotes %></td>
+    22:         <% if correct_user %>
+    23:           <td><%= link_to 'Show', poll %></td>
+    24:           <td><%= link_to 'Edit', edit_poll_path(poll) %></td>
+    25:           <td><%= link_to 'Destroy', poll, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  
+app/views/polls/index.html.erb:22:in `block in _app_views_polls_index_html_erb__3585828845267661788_70180468708720'
+app/views/polls/index.html.erb:16:in `_app_views_polls_index_html_erb__3585828845267661788_70180468708720'
+Started GET "/polls" for 127.0.0.1 at 2018-12-02 21:01:53 -0500
+Processing by PollsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  ↳ app/views/polls/index.html.erb:16
+  Rendered polls/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 267ms (Views: 262.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/polls/1/edit" for 127.0.0.1 at 2018-12-02 21:01:57 -0500
+Processing by PollsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:82
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:101
+Redirected to http://localhost:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-02 21:01:57 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 66ms (Views: 63.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2018-12-02 21:03:58 -0500
+Processing by PollsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  ↳ app/views/polls/index.html.erb:16
+  Rendered polls/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 54ms (Views: 49.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/polls/4" for 127.0.0.1 at 2018-12-02 21:04:00 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:82
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:101
+Completed 404 Not Found in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=4):
+  
+app/controllers/polls_controller.rb:101:in `correct_user'
+Started GET "/polls" for 127.0.0.1 at 2018-12-02 21:04:05 -0500
+Processing by PollsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  ↳ app/views/polls/index.html.erb:16
+  Rendered polls/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 70ms (Views: 65.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/polls/5/edit" for 127.0.0.1 at 2018-12-02 21:04:07 -0500
+Processing by PollsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:82
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:101
+Completed 404 Not Found in 5ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=5):
+  
+app/controllers/polls_controller.rb:101:in `correct_user'
+Started GET "/polls" for 127.0.0.1 at 2018-12-02 21:04:09 -0500
+Processing by PollsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  ↳ app/views/polls/index.html.erb:16
+  Rendered polls/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 54ms (Views: 50.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/polls/5" for 127.0.0.1 at 2018-12-02 21:04:16 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:82
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:101
+Completed 404 Not Found in 4ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=5):
+  
+app/controllers/polls_controller.rb:101:in `correct_user'
+Started GET "/polls" for 127.0.0.1 at 2018-12-02 21:04:38 -0500
+Processing by PollsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  ↳ app/views/polls/index.html.erb:16
+  Rendered polls/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 47ms (Views: 43.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/polls/4" for 127.0.0.1 at 2018-12-02 21:04:42 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:82
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:101
+Completed 404 Not Found in 4ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=4):
+  
+app/controllers/polls_controller.rb:101:in `correct_user'
+Started GET "/polls" for 127.0.0.1 at 2018-12-02 21:04:45 -0500
+Processing by PollsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  ↳ app/views/polls/index.html.erb:16
+  Rendered polls/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 53ms (Views: 48.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/polls/4" for 127.0.0.1 at 2018-12-02 21:04:47 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:82
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:101
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=4):
+  
+app/controllers/polls_controller.rb:101:in `correct_user'
+Started GET "/polls" for 127.0.0.1 at 2018-12-02 21:07:20 -0500
+Processing by PollsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  ↳ app/views/polls/index.html.erb:16
+  Rendered polls/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 43ms (Views: 39.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2018-12-02 21:07:24 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (14.5ms)
+  Rendered polls/new.html.erb within layouts/application (16.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 63ms (Views: 59.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2018-12-02 21:07:39 -0500
+Processing by PollsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  ↳ app/views/polls/index.html.erb:16
+  Rendered polls/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 58ms (Views: 52.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2018-12-02 21:07:40 -0500
+Processing by PollsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  ↳ app/views/polls/index.html.erb:16
+  Rendered polls/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 54ms (Views: 49.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/help" for 127.0.0.1 at 2018-12-02 21:07:42 -0500
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 49ms (Views: 45.4ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2018-12-02 21:07:43 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LoQhzco6fqUyfg7j61rPZpM7gUWA9HAa2lWqhht0yqJ2f19qS0w4rD4sMou7nmHjZxr51gCfqz6DqZ3Tf9hSwA=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-02 21:07:43 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-12-02 21:07:45 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.1ms)
+  Rendered users/new.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 50ms (Views: 46.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-12-02 21:07:47 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 66ms (Views: 62.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-12-02 21:07:52 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D4ry/ZJRonYnsDmLs7A9kMIEvsrQBsq7g5xLxFXiqIVQCemlAfiAZXvcH1MsRtz1ztK41cTJwNcxmCnMUmlwpQ==", "session"=>{"email"=>"j@j.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "j@j.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 69ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2018-12-02 21:07:52 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:72
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:96
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 51ms (Views: 44.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/7/edit" for 127.0.0.1 at 2018-12-02 21:07:56 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:72
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:96
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.0ms)
+  Rendered users/edit.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 74ms (Views: 67.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2018-12-02 21:08:05 -0500
+Processing by PollsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  ↳ app/views/polls/index.html.erb:16
+  Rendered polls/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 62ms (Views: 56.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2018-12-02 21:08:06 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (3.5ms)
+  Rendered polls/new.html.erb within layouts/application (6.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 78ms (Views: 74.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/polls" for 127.0.0.1 at 2018-12-02 21:08:22 -0500
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VG0DRBwbHDUPnbFHewCvM8yMwK6LZ5NSkJ1UonOemtA0uEkPyvrtomO47W+T8NU17qIP9V1bs1jAzGY4/6Nbdg==", "poll"=>{"title"=>"t is for title", "description"=>"something", "user_id"=>"7", "totalVotes"=>""}, "commit"=>"Create Poll"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/polls_controller.rb:45
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:45
+  [1m[36mPoll Create (0.7ms)[0m  [1m[32mINSERT INTO "polls" ("title", "description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "t is for title"], ["description", "something"], ["user_id", 7], ["created_at", "2018-12-03 02:08:22.834956"], ["updated_at", "2018-12-03 02:08:22.834956"]]
+  ↳ app/controllers/polls_controller.rb:45
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/polls_controller.rb:45
+Redirected to http://localhost:3000/polls/6
+Completed 302 Found in 19ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/polls/6" for 127.0.0.1 at 2018-12-02 21:08:23 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:82
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:101
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=6):
+  
+app/controllers/polls_controller.rb:101:in `correct_user'
+Started GET "/polls/7" for 127.0.0.1 at 2018-12-02 21:08:37 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:82
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Poll with 'id'=7):
+  
+app/controllers/polls_controller.rb:82:in `set_poll'
+Started GET "/polls" for 127.0.0.1 at 2018-12-02 21:08:41 -0500
+Processing by PollsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  ↳ app/views/polls/index.html.erb:16
+  Rendered polls/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 45ms (Views: 40.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/polls/6" for 127.0.0.1 at 2018-12-02 21:08:45 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:82
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:101
+Completed 404 Not Found in 4ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=6):
+  
+app/controllers/polls_controller.rb:101:in `correct_user'
+Started GET "/polls" for 127.0.0.1 at 2018-12-02 21:08:49 -0500
+Processing by PollsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  ↳ app/views/polls/index.html.erb:16
+  Rendered polls/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 55ms (Views: 50.9ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/polls/6" for 127.0.0.1 at 2018-12-02 21:08:59 -0500
+Processing by PollsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2pgx44lwEuaF71txB/fHCeQXbG8KFL9Etr01YDVtbTmCY09ECAZU74m9ZxlXM2mMEDYU/Ip/ZGDvQQI1UcH1Ww==", "id"=>"6"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:82
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/polls_controller.rb:72
+  [1m[36mPoll Destroy (0.7ms)[0m  [1m[31mDELETE FROM "polls" WHERE "polls"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/polls_controller.rb:72
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/polls_controller.rb:72
+Redirected to http://localhost:3000/polls
+Completed 302 Found in 6ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2018-12-02 21:08:59 -0500
+Processing by PollsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  ↳ app/views/polls/index.html.erb:16
+  Rendered polls/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 43ms (Views: 39.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2018-12-02 21:09:11 -0500
+Processing by PollsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  ↳ app/views/polls/index.html.erb:16
+  Rendered polls/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 56ms (Views: 51.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-02 21:09:22 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 52ms (Views: 49.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2018-12-02 21:09:26 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:72
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:96
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 48ms (Views: 41.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-12-02 21:09:29 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:72
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:96
+Redirected to http://localhost:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-02 21:09:29 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 51ms (Views: 48.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-12-02 21:09:34 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:72
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:96
+Redirected to http://localhost:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-02 21:09:34 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 45ms (Views: 41.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2018-12-02 21:09:47 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:72
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:96
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 46ms (Views: 39.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-12-02 21:09:48 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-12-02 21:09:49 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.4ms)
+  Rendered users/new.html.erb within layouts/application (6.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 48ms (Views: 45.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-02 21:09:50 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 44ms (Views: 40.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2018-12-02 21:09:50 -0500
+Processing by PollsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  ↳ app/views/polls/index.html.erb:16
+  Rendered polls/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 45ms (Views: 40.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2018-12-02 21:09:51 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.3ms)
+  Rendered polls/new.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 58ms (Views: 54.2ms | ActiveRecord: 0.1ms)
+
+
