@@ -28,6 +28,7 @@
   </div>
   
 <h2>Your Poll's Options</h2>
+<%= form_for @poll do |form| %>
  <table width="100%" border="1">
   <thead>
     <tr>
@@ -41,11 +42,20 @@
       <tr>
           <td><%= option.name %></td>
           <td><%= option.numVotes %></td>
+          <td> <%= check_box_tag 'option_ids[]', option.id -%>
+               <%= h option.name -%> </td>
           <td><%= link_to 'Show', option %></td>
       </tr>
     <% end %>
+
   </tbody>
 </table>
+  </div>
+   <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
 
 <h1>Add a new option</h1>
 
