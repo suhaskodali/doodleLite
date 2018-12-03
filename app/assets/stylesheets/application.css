@@ -17,3 +17,22 @@
   min-height: 38px;
   background-color: #f55e55;
 }
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+ul {
+    border: 1px solid #555;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
