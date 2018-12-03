@@ -17,7 +17,7 @@ class PollsController < ApplicationController
     @new_option = Option.new(poll_id: @poll.id)
     
     if request.post?
-      option_ids = params[:option_id].collect {|id| id.to_i} if params[:option_id]    
+      option_ids = params[:option_ids].collect {|id| id.to_i} if params[:option_ids]    
       option_ids.each do |id|
         o = Option.find_by_id(id)
         o.numVotes = o.numVotes+1

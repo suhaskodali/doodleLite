@@ -42,11 +42,12 @@
       <tr>
           <td><%= option.name %></td>
           <td><%= option.numVotes %></td>
-          <td> <%= check_box_tag 'option_id[]', option.id -%>
+          <td> <%= check_box_tag 'option_ids[]', option.id -%>
                <%= h option.name -%> </td>
           <td><%= link_to 'Show', option %></td>
       </tr>
     <% end %>
+
   </tbody>
 </table>
   </div>

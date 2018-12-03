@@ -7238,3 +7238,1036 @@ ActionController::ParameterMissing (param is missing or the value is empty: poll
 app/controllers/polls_controller.rb:85:in `poll_params'
 app/controllers/polls_controller.rb:57:in `block in update'
 app/controllers/polls_controller.rb:56:in `update'
+Started GET "/polls/3" for 149.152.23.142 at 2018-12-03 00:27:56 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/finalProject0.3/cs416-f18-finalproject-group10/app/views/polls/show.html.erb:78: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/polls/show.html.erb:78: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/polls/3" for 149.152.23.142 at 2018-12-03 00:28:50 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/finalProject0.3/cs416-f18-finalproject-group10/app/views/polls/show.html.erb:79: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/polls/show.html.erb:79: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/polls/3" for 149.152.23.142 at 2018-12-03 00:29:32 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mOption Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 1]]
+  ↳ app/views/polls/show.html.erb:24
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:25
+  [1m[36mOption Load (0.2ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendered polls/show.html.erb within layouts/application (198.6ms)
+Completed 500 Internal Server Error in 204ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<#<Class:0x007f4fb40adab0>:0x007f4fb43858c8>
+Did you mean?  fork):
+    39:   </thead>
+    40:    <tbody>
+    41:       <tr>
+    42:         <%= form.collection_check_boxes(:option_id, @poll, :id, :name) do |b| %>
+    43:           <td>
+    44:             <div class="checkbox">
+    45:                 <%= b.label(class: "checkbox") { b.check_box(checked: (poll.option_id.include? b.value), class: "add_margin") + b.text } %>
+  
+app/views/polls/show.html.erb:42:in `_app_views_polls_show_html_erb__744717410395079177_69990151369840'
+Started GET "/polls/3" for 149.152.23.142 at 2018-12-03 00:29:59 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mOption Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 1]]
+  ↳ app/views/polls/show.html.erb:24
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:25
+  [1m[36mOption Load (0.1ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendered polls/show.html.erb within layouts/application (285.7ms)
+Completed 500 Internal Server Error in 292ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<#<Class:0x007f4fb40adab0>:0x00000001a49ad8>
+Did you mean?  fork):
+    39:   </thead>
+    40:    <tbody>
+    41:       <tr>
+    42:         <%= form.collection_check_boxes(:option_id, @poll, :id, :name) do |b| %>
+    43:           <td>
+    44:             <div class="checkbox">
+    45:                 <%= b.label(class: "checkbox") { b.check_box(checked: (poll.option_id.include? b.value), class: "add_margin") + b.text } %>
+  
+app/views/polls/show.html.erb:42:in `_app_views_polls_show_html_erb__744717410395079177_16697320'
+Started GET "/polls/3" for 149.152.23.142 at 2018-12-03 00:30:58 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/finalProject0.3/cs416-f18-finalproject-group10/app/views/polls/show.html.erb:79: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/polls/show.html.erb:79: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/polls/3" for 149.152.23.142 at 2018-12-03 00:31:51 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/finalProject0.3/cs416-f18-finalproject-group10/app/views/polls/show.html.erb:79: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/polls/show.html.erb:79: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/polls/3" for 149.152.23.142 at 2018-12-03 00:36:03 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mOption Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 1]]
+  ↳ app/views/polls/show.html.erb:24
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:25
+  [1m[36mOption Load (0.2ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.1ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendered polls/show.html.erb within layouts/application (223.0ms)
+Completed 500 Internal Server Error in 228ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<#<Class:0x007f4fb40adab0>:0x007f4fade7b0b8>
+Did you mean?  fork):
+    40:    <tbody>
+    41:       <tr>
+    42: 
+    43:         <%= form.collection_check_boxes(:option_id, @option, @poll, :id, :name) do |b| %>
+    44:           <td>
+    45:             <div class="checkbox">
+    46:                 <%= b.label(class: "checkbox") { b.check_box(checked: (poll.option_id.include? b.value), class: "add_margin") + b.text } %>
+  
+app/views/polls/show.html.erb:43:in `_app_views_polls_show_html_erb__744717410395079177_69990098394640'
+Started GET "/polls/3" for 149.152.23.142 at 2018-12-03 00:37:58 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mOption Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 1]]
+  ↳ app/views/polls/show.html.erb:24
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:25
+  [1m[36mOption Load (0.1ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendered polls/show.html.erb within layouts/application (201.0ms)
+Completed 500 Internal Server Error in 207ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `dog' for #<#<Class:0x007f4fb40adab0>:0x007f4fb434cf00>):
+    39:   </thead>
+    40:    <tbody>
+    41:       <tr>
+    42:         <%= form_with(model: dog, local: true) do |form| %>
+    43:         <%= form.collection_check_boxes(:option_id, @option, @poll, :id, :name) do |b| %>
+    44:           <td>
+    45:             <div class="checkbox">
+  
+app/views/polls/show.html.erb:42:in `_app_views_polls_show_html_erb__744717410395079177_69990151253620'
+Started GET "/polls/3" for 149.152.23.142 at 2018-12-03 00:38:09 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mOption Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 1]]
+  ↳ app/views/polls/show.html.erb:24
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:25
+  [1m[36mOption Load (0.1ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Option Load (0.0ms)[0m  [1m[34mSELECT  "options".* FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 11]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendered polls/show.html.erb within layouts/application (234.4ms)
+Completed 500 Internal Server Error in 240ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `poll' for #<#<Class:0x007f4fb40adab0>:0x007f4fb0027018>
+Did you mean?  @poll):
+    39:   </thead>
+    40:    <tbody>
+    41:       <tr>
+    42:         <%= form_with(model: poll, local: true) do |form| %>
+    43:         <%= form.collection_check_boxes(:option_id, @option, @poll, :id, :name) do |b| %>
+    44:           <td>
+    45:             <div class="checkbox">
+  
+app/views/polls/show.html.erb:42:in `_app_views_polls_show_html_erb__744717410395079177_69990116048320'
+Started GET "/polls/3" for 149.152.23.142 at 2018-12-03 00:38:45 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mOption Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 1]]
+  ↳ app/views/polls/show.html.erb:24
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:25
+  Rendered polls/show.html.erb within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for :name:Symbol):
+    40:    <tbody>
+    41:       <tr>
+    42:         <%= form_with(model: @poll, local: true) do |form| %>
+    43:         <%= form.collection_check_boxes(:option_id, @option, @poll, :id, :name) do |b| %>
+    44:           <td>
+    45:             <div class="checkbox">
+    46:                 <%= b.label(class: "checkbox") { b.check_box(checked: (poll.option_id.include? b.value), class: "add_margin") + b.text } %>
+  
+app/views/polls/show.html.erb:43:in `block in _app_views_polls_show_html_erb__744717410395079177_69990083226080'
+app/views/polls/show.html.erb:42:in `_app_views_polls_show_html_erb__744717410395079177_69990083226080'
+Started GET "/polls/3" for 149.152.23.142 at 2018-12-03 00:39:33 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mOption Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 1]]
+  ↳ app/views/polls/show.html.erb:24
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:25
+  Rendered polls/show.html.erb within layouts/application (15.5ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    40:    <tbody>
+    41:       <tr>
+    42:         <%= form_with(model: @poll, local: true) do |form| %>
+    43:         <%= form.collection_check_boxes(:option_id, @option, :id, :name) do |b| %>
+    44:           <td>
+    45:             <div class="checkbox">
+    46:                 <%= b.label(class: "checkbox") { b.check_box(checked: (poll.option_id.include? b.value), class: "add_margin") + b.text } %>
+  
+app/views/polls/show.html.erb:43:in `block in _app_views_polls_show_html_erb__744717410395079177_69990093143240'
+app/views/polls/show.html.erb:42:in `_app_views_polls_show_html_erb__744717410395079177_69990093143240'
+Started GET "/polls" for 149.152.23.142 at 2018-12-03 00:40:03 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  ↳ app/views/polls/index.html.erb:16
+  Rendered polls/index.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 44ms (Views: 42.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/polls/3" for 149.152.23.142 at 2018-12-03 00:40:06 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mOption Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 1]]
+  ↳ app/views/polls/show.html.erb:24
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:25
+  Rendered polls/show.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    40:    <tbody>
+    41:       <tr>
+    42:         <%= form_with(model: @poll, local: true) do |form| %>
+    43:         <%= form.collection_check_boxes(:option_id, @option, :id, :name) do |b| %>
+    44:           <td>
+    45:             <div class="checkbox">
+    46:                 <%= b.label(class: "checkbox") { b.check_box(checked: (poll.option_id.include? b.value), class: "add_margin") + b.text } %>
+  
+app/views/polls/show.html.erb:43:in `block in _app_views_polls_show_html_erb__744717410395079177_69990086541100'
+app/views/polls/show.html.erb:42:in `_app_views_polls_show_html_erb__744717410395079177_69990086541100'
+Started GET "/polls/3" for 149.152.23.142 at 2018-12-03 00:40:31 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mOption Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 1]]
+  ↳ app/views/polls/show.html.erb:24
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:25
+  [1m[36mOption Load (0.1ms)[0m  [1m[34mSELECT "options".* FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:43
+  Rendered polls/show.html.erb within layouts/application (340.4ms)
+Completed 500 Internal Server Error in 345ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `poll' for #<#<Class:0x007f4fb40adab0>:0x007f4fad38f258>
+Did you mean?  @poll):
+    43:         <%= form.collection_check_boxes(:option_ids, @options, :id, :name) do |b| %>
+    44:           <td>
+    45:             <div class="checkbox">
+    46:                 <%= b.label(class: "checkbox") { b.check_box(checked: (poll.option_id.include? b.value), class: "add_margin") + b.text } %>
+    47:             </div>
+    48:           </td>
+    49:           <% end %>
+  
+app/views/polls/show.html.erb:46:in `block (3 levels) in _app_views_polls_show_html_erb__744717410395079177_69990092701780'
+app/views/polls/show.html.erb:46:in `block (2 levels) in _app_views_polls_show_html_erb__744717410395079177_69990092701780'
+app/views/polls/show.html.erb:43:in `block in _app_views_polls_show_html_erb__744717410395079177_69990092701780'
+app/views/polls/show.html.erb:42:in `_app_views_polls_show_html_erb__744717410395079177_69990092701780'
+Started GET "/polls/3" for 149.152.23.142 at 2018-12-03 00:40:55 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mOption Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 1]]
+  ↳ app/views/polls/show.html.erb:24
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:25
+  [1m[36mOption Load (0.1ms)[0m  [1m[34mSELECT "options".* FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:43
+  Rendered polls/show.html.erb within layouts/application (11.9ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `option_id' for #<Poll:0x007f4f982c61d8>
+Did you mean?  option_ids
+               option_ids=
+               options
+               options=):
+    43:         <%= form.collection_check_boxes(:option_ids, @options, :id, :name) do |b| %>
+    44:           <td>
+    45:             <div class="checkbox">
+    46:                 <%= b.label(class: "checkbox") { b.check_box(checked: (@poll.option_id.include? b.value), class: "add_margin") + b.text } %>
+    47:             </div>
+    48:           </td>
+    49:           <% end %>
+  
+app/views/polls/show.html.erb:46:in `block (3 levels) in _app_views_polls_show_html_erb__744717410395079177_69989916091440'
+app/views/polls/show.html.erb:46:in `block (2 levels) in _app_views_polls_show_html_erb__744717410395079177_69989916091440'
+app/views/polls/show.html.erb:43:in `block in _app_views_polls_show_html_erb__744717410395079177_69989916091440'
+app/views/polls/show.html.erb:42:in `_app_views_polls_show_html_erb__744717410395079177_69989916091440'
+Started GET "/polls/3" for 149.152.23.142 at 2018-12-03 00:41:11 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mOption Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 1]]
+  ↳ app/views/polls/show.html.erb:24
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:25
+  [1m[36mOption Load (0.1ms)[0m  [1m[34mSELECT "options".* FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:43
+  Rendered polls/show.html.erb within layouts/application (18.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 56ms (Views: 52.5ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/polls/3" for 149.152.23.142 at 2018-12-03 00:41:19 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wmumCHHyUOQ6RCDp07XnYlJlYCjqbz1Kj1D3LmhebZ0a5sabzqgkS5nVzaukJHE5c4w+yVP7502mhci+9yDk0g==", "poll"=>{"option_ids"=>["", "1", "4", "5", "7", "8"]}, "commit"=>"Update Poll", "id"=>"3"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+Unpermitted parameter: :option_ids
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/polls_controller.rb:57
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:57
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/polls_controller.rb:57
+Redirected to https://b051368cc6304bbfba473f46cdb127e0.vfs.cloud9.us-east-1.amazonaws.com/polls/3
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/polls/3" for 149.152.23.142 at 2018-12-03 00:41:19 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mOption Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 1]]
+  ↳ app/views/polls/show.html.erb:24
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:25
+  [1m[36mOption Load (0.2ms)[0m  [1m[34mSELECT "options".* FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:43
+  Rendered polls/show.html.erb within layouts/application (8.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 47ms (Views: 43.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/options" for 149.152.23.142 at 2018-12-03 00:41:32 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OptionsController#index as HTML
+  Rendering options/index.html.erb within layouts/application
+  [1m[36mOption Load (0.2ms)[0m  [1m[34mSELECT "options".* FROM "options"[0m
+  ↳ app/views/options/index.html.erb:16
+  Rendered options/index.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/polls/3" for 149.152.23.142 at 2018-12-03 00:41:41 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gmC6nY8Xs3j24mLDUlluVitHF9CSUjcxaiVR4RcauPRa7doOME3H11Vzj4ElyPgNCq5JMSvG7TZD8G5xiGQxuw==", "poll"=>{"option_ids"=>["", "1", "2", "3", "4", "5", "7", "8"]}, "commit"=>"Update Poll", "id"=>"3"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+Unpermitted parameter: :option_ids
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/polls_controller.rb:57
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:57
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/polls_controller.rb:57
+Redirected to https://b051368cc6304bbfba473f46cdb127e0.vfs.cloud9.us-east-1.amazonaws.com/polls/3
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/polls/3" for 149.152.23.142 at 2018-12-03 00:41:41 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mOption Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 1]]
+  ↳ app/views/polls/show.html.erb:24
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:25
+  [1m[36mOption Load (0.1ms)[0m  [1m[34mSELECT "options".* FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:43
+  Rendered polls/show.html.erb within layouts/application (8.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 44ms (Views: 39.9ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/polls/3" for 149.152.23.142 at 2018-12-03 00:41:42 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iLUGpUyqerhZluAnoV8c24JK25ZjtJYlbswkEkr8Mq9QOGY28/AOF/oHDWXWzoqAo6OFd9ogTCJHGRuC1YK74A==", "poll"=>{"option_ids"=>["", "1", "2", "3", "4", "5", "7", "8"]}, "commit"=>"Update Poll", "id"=>"3"}
+  [1m[36mPoll Load (0.8ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+Unpermitted parameter: :option_ids
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/polls_controller.rb:57
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:57
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/polls_controller.rb:57
+Redirected to https://b051368cc6304bbfba473f46cdb127e0.vfs.cloud9.us-east-1.amazonaws.com/polls/3
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/polls/3" for 149.152.23.142 at 2018-12-03 00:41:42 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.5ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mOption Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 1]]
+  ↳ app/views/polls/show.html.erb:24
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:25
+  [1m[36mOption Load (0.2ms)[0m  [1m[34mSELECT "options".* FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:43
+  Rendered polls/show.html.erb within layouts/application (7.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 45ms (Views: 40.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/options" for 149.152.23.142 at 2018-12-03 00:41:46 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OptionsController#index as HTML
+  Rendering options/index.html.erb within layouts/application
+  [1m[36mOption Load (0.2ms)[0m  [1m[34mSELECT "options".* FROM "options"[0m
+  ↳ app/views/options/index.html.erb:16
+  Rendered options/index.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/polls/3" for 149.152.23.142 at 2018-12-03 00:42:18 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"buDRIUbR0zqOaCO1JIv3JRyKSeyHfXsuMGQ8UG9qSYO2bbGy+YunlS35zvdTGmF+PWMXDT7poSkZsQPA8BTAzA==", "poll"=>{"option_ids"=>["", "1", "2", "3", "4", "5", "7", "8"]}, "commit"=>"Update Poll", "id"=>"3"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+Unpermitted parameter: :option_ids
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/polls_controller.rb:57
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:57
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/polls_controller.rb:57
+Redirected to https://b051368cc6304bbfba473f46cdb127e0.vfs.cloud9.us-east-1.amazonaws.com/polls/3
+Completed 302 Found in 25ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/polls/3" for 149.152.23.142 at 2018-12-03 00:42:18 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mOption Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 1]]
+  ↳ app/views/polls/show.html.erb:24
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:25
+  [1m[36mOption Load (0.1ms)[0m  [1m[34mSELECT "options".* FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:43
+  Rendered polls/show.html.erb within layouts/application (9.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 57ms (Views: 46.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/options" for 149.152.23.142 at 2018-12-03 00:42:23 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OptionsController#index as HTML
+  Rendering options/index.html.erb within layouts/application
+  [1m[36mOption Load (0.2ms)[0m  [1m[34mSELECT "options".* FROM "options"[0m
+  ↳ app/views/options/index.html.erb:16
+  Rendered options/index.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 40ms (Views: 38.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/polls/3" for 149.152.23.142 at 2018-12-03 00:48:04 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mOption Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 1]]
+  ↳ app/views/polls/show.html.erb:24
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:25
+  [1m[36mOption Load (0.1ms)[0m  [1m[34mSELECT "options".* FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:43
+  Rendered polls/show.html.erb within layouts/application (9.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 72ms (Views: 52.0ms | ActiveRecord: 2.2ms)
+
+
+Started PATCH "/polls/3" for 149.152.23.142 at 2018-12-03 00:48:05 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LD14LB0k4t9AByQLN8DR2jcWdeIPeL4Te19ZoKQwqYX0sBi/on6WcOOWyUlAUUeBFv8rA7bsZBRSimYwO04gyg==", "poll"=>{"option_ids"=>["", "1", "2", "3", "4", "5", "7", "8"]}, "commit"=>"Update Poll", "id"=>"3"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/polls_controller.rb:57
+  [1m[36mOption Load (0.2ms)[0m  [1m[34mSELECT "options".* FROM "options" WHERE "options"."id" IN (?, ?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["id", 2], ["id", 3], ["id", 4], ["id", 5], ["id", 7], ["id", 8]]
+  ↳ app/controllers/polls_controller.rb:57
+  [1m[36mOption Load (0.1ms)[0m  [1m[34mSELECT "options".* FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/controllers/polls_controller.rb:57
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:57
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/polls_controller.rb:57
+Redirected to https://b051368cc6304bbfba473f46cdb127e0.vfs.cloud9.us-east-1.amazonaws.com/polls/3
+Completed 302 Found in 10ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/polls/3" for 149.152.23.142 at 2018-12-03 00:48:06 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mOption Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 1]]
+  ↳ app/views/polls/show.html.erb:24
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:25
+  [1m[36mOption Load (0.2ms)[0m  [1m[34mSELECT "options".* FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:43
+  Rendered polls/show.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 45ms (Views: 42.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/options" for 149.152.23.142 at 2018-12-03 00:48:09 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OptionsController#index as HTML
+  Rendering options/index.html.erb within layouts/application
+  [1m[36mOption Load (0.2ms)[0m  [1m[34mSELECT "options".* FROM "options"[0m
+  ↳ app/views/options/index.html.erb:16
+  Rendered options/index.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/polls/3" for 149.152.23.142 at 2018-12-03 00:49:29 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mOption Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 1]]
+  ↳ app/views/polls/show.html.erb:24
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:25
+  [1m[36mOption Load (0.1ms)[0m  [1m[34mSELECT "options".* FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:41
+  Rendered polls/show.html.erb within layouts/application (7.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 44ms (Views: 41.0ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/polls/3" for 149.152.23.142 at 2018-12-03 00:49:33 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5pS8WPshN6QGlXlxhp5UgoPoyNM/6g5sXXQevks4j2czKY2DKHt1H2mmJ+ql2da2aaX0Cf9Q9m28VEuthyarHw==", "option_id"=>["2", "3", "4"], "commit"=>"Update Poll", "id"=>"3"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: poll):
+  
+app/controllers/polls_controller.rb:85:in `poll_params'
+app/controllers/polls_controller.rb:57:in `block in update'
+app/controllers/polls_controller.rb:56:in `update'
+Started PATCH "/polls/3" for 149.152.23.142 at 2018-12-03 00:52:54 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5pS8WPshN6QGlXlxhp5UgoPoyNM/6g5sXXQevks4j2czKY2DKHt1H2mmJ+ql2da2aaX0Cf9Q9m28VEuthyarHw==", "option_id"=>["2", "3", "4"], "commit"=>"Update Poll", "id"=>"3"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+Completed 400 Bad Request in 11ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: poll):
+  
+app/controllers/polls_controller.rb:85:in `poll_params'
+app/controllers/polls_controller.rb:57:in `block in update'
+app/controllers/polls_controller.rb:56:in `update'
+Started PATCH "/polls/3" for 149.152.23.142 at 2018-12-03 00:59:31 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5pS8WPshN6QGlXlxhp5UgoPoyNM/6g5sXXQevks4j2czKY2DKHt1H2mmJ+ql2da2aaX0Cf9Q9m28VEuthyarHw==", "option_id"=>["2", "3", "4"], "commit"=>"Update Poll", "id"=>"3"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: poll):
+  
+app/controllers/polls_controller.rb:85:in `poll_params'
+app/controllers/polls_controller.rb:57:in `block in update'
+app/controllers/polls_controller.rb:56:in `update'
+Started GET "/polls" for 149.152.23.142 at 2018-12-03 01:02:32 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  ↳ app/views/polls/index.html.erb:16
+  Rendered polls/index.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 59ms (Views: 53.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/polls/new" for 149.152.23.142 at 2018-12-03 01:02:33 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.3ms)
+  Rendered polls/new.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/polls" for 149.152.23.142 at 2018-12-03 01:02:48 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SGu+hqkW7JtHkzZJBSQiYFV3w7oN6NpVtrsnYyfXJyAz8eZTNqVZ3n6FVLzRhCtpkt89JlL27wMNj5UEXVs44A==", "poll"=>{"title"=>"Poll5", "description"=>"test without poll_param", "user_id"=>"1", "totalVotes"=>"0"}, "commit"=>"Create Poll"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 4, expected 1)):
+  
+app/controllers/polls_controller.rb:40:in `create'
+Started POST "/polls" for 149.152.23.142 at 2018-12-03 01:03:56 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IDbyAWEm/f8lCZi7ib0eRsT/Tfw90zUxqyHX6LGM5l31i8Pasny/REo6xiCq+pxyLrJxJv1pzTBKAYL7fZLCJQ==", "poll"=>{"title"=>"Poll5", "description"=>"test without poll_param", "user_id"=>"1", "totalVotes"=>"0"}, "commit"=>"Create Poll"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/polls_controller.rb:43
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:43
+  [1m[36mPoll Create (0.9ms)[0m  [1m[32mINSERT INTO "polls" ("title", "description", "user_id", "created_at", "updated_at", "totalVotes") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Poll5"], ["description", "test without poll_param"], ["user_id", 1], ["created_at", "2018-12-03 01:03:56.770954"], ["updated_at", "2018-12-03 01:03:56.770954"], ["totalVotes", 0]]
+  ↳ app/controllers/polls_controller.rb:43
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/polls_controller.rb:43
+Redirected to https://b051368cc6304bbfba473f46cdb127e0.vfs.cloud9.us-east-1.amazonaws.com/polls/5
+Completed 302 Found in 42ms (ActiveRecord: 9.4ms)
+
+
+Started GET "/polls/5" for 149.152.23.142 at 2018-12-03 01:03:56 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mOption Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 5], ["LIMIT", 1]]
+  ↳ app/views/polls/show.html.erb:24
+  [1m[36mOption Load (0.1ms)[0m  [1m[34mSELECT "options".* FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/views/polls/show.html.erb:41
+  Rendered polls/show.html.erb within layouts/application (5.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 53ms (Views: 41.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/polls/3" for 149.152.23.142 at 2018-12-03 01:04:30 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mOption Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 1]]
+  ↳ app/views/polls/show.html.erb:24
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:25
+  [1m[36mOption Load (0.1ms)[0m  [1m[34mSELECT "options".* FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:41
+  Rendered polls/show.html.erb within layouts/application (8.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 72ms (Views: 51.7ms | ActiveRecord: 2.6ms)
+
+
+Started PATCH "/polls/3" for 149.152.23.142 at 2018-12-03 01:04:34 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A53xLJQ8ruBr+3LD5WElXxH3Mf3rsib1zBbr9g7dZjjWIMD3R2bsWwTILFjGJqdr+7oNJysI3vQtNr7lwsNCQA==", "option_ids"=>["3", "4"], "commit"=>"Update Poll", "id"=>"3"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: poll):
+  
+app/controllers/polls_controller.rb:57:in `block in update'
+app/controllers/polls_controller.rb:56:in `update'
+Started GET "/polls/3" for 149.152.23.142 at 2018-12-03 01:05:28 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mOption Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 1]]
+  ↳ app/views/polls/show.html.erb:24
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:25
+  [1m[36mOption Load (0.1ms)[0m  [1m[34mSELECT "options".* FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:41
+  Rendered polls/show.html.erb within layouts/application (8.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 81ms (Views: 52.6ms | ActiveRecord: 2.3ms)
+
+
+Started PATCH "/polls/3" for 149.152.23.142 at 2018-12-03 01:05:32 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VQSgYnfVhEAOJAJJm4Vh0yMO+8XvnAs4xe+4dDYiX96AuZG5pI/G+2EXXNK4wuPnyUPHHy8m8zkkz+1n+jx7pg==", "option_ids"=>["4", "5"], "commit"=>"Update Poll", "id"=>"3"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/polls_controller.rb:57:in `block in update'
+app/controllers/polls_controller.rb:56:in `update'
+Started GET "/polls/3" for 149.152.23.142 at 2018-12-03 01:06:01 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mOption Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 1]]
+  ↳ app/views/polls/show.html.erb:24
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:25
+  [1m[36mOption Load (0.2ms)[0m  [1m[34mSELECT "options".* FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:41
+  Rendered polls/show.html.erb within layouts/application (10.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 82ms (Views: 57.0ms | ActiveRecord: 2.7ms)
+
+
+Started PATCH "/polls/3" for 149.152.23.142 at 2018-12-03 01:06:04 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W2Ki+n6ZPTC1/LHK6C3j7ASuHJE8twb5zFOBlwlxcXaO35MhrcN/i9rP71HLamHY7uMgS/wN/vgtc9SExW9VDg==", "option_ids"=>["3", "4"], "commit"=>"Update Poll", "id"=>"3"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/polls_controller.rb:57
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/polls_controller.rb:57
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  
+app/controllers/polls_controller.rb:57:in `block in update'
+app/controllers/polls_controller.rb:56:in `update'
+Started PATCH "/polls/3" for 149.152.23.142 at 2018-12-03 01:06:27 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W2Ki+n6ZPTC1/LHK6C3j7ASuHJE8twb5zFOBlwlxcXaO35MhrcN/i9rP71HLamHY7uMgS/wN/vgtc9SExW9VDg==", "option_ids"=>["3", "4"], "commit"=>"Update Poll", "id"=>"3"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.7ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1..2)):
+  
+app/controllers/polls_controller.rb:57:in `[]'
+app/controllers/polls_controller.rb:57:in `block in update'
+app/controllers/polls_controller.rb:56:in `update'
+Started GET "/polls/3" for 149.152.23.142 at 2018-12-03 01:09:51 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+  [1m[36mCACHE Poll Load (0.0ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:15
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mOption Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "options" WHERE "options"."poll_id" = ? LIMIT ?[0m  [["poll_id", 3], ["LIMIT", 1]]
+  ↳ app/views/polls/show.html.erb:24
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:25
+  [1m[36mOption Load (0.2ms)[0m  [1m[34mSELECT "options".* FROM "options" WHERE "options"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/views/polls/show.html.erb:41
+  Rendered polls/show.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+Completed 200 OK in 72ms (Views: 52.4ms | ActiveRecord: 2.3ms)
+
+
