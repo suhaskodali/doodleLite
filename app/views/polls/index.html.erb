@@ -19,14 +19,19 @@
         <td><%= poll.description %></td>
         <td><%= poll.user_id %></td>
         <td><%= poll.totalVotes %></td>
-        <td><%= link_to 'Show', poll %></td>
-        <td><%= link_to 'Edit', edit_poll_path(poll) %></td>
-        <td><%= link_to 'Destroy', poll, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if current_user %>
+          <td><%= link_to 'Show', poll %></td>
+          <td><%= link_to 'Edit', edit_poll_path(poll) %></td>
+          <td><%= link_to 'Destroy', poll, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Poll', new_poll_path %>
+<% if current_user %>
+  <%= link_to 'New Poll', new_poll_path %>
+<% else %>
+  <%= link_to 'Sign in', login_path %>
+<% end %>

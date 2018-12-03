@@ -1,6 +1,6 @@
 class PollsController < ApplicationController
   before_action :set_poll, only: [:show, :edit, :update, :destroy]
-
+  include SessionsHelper
   # GET /polls
   # GET /polls.json
   def index
@@ -10,14 +10,14 @@ class PollsController < ApplicationController
   # GET /polls/1
   # GET /polls/1.json
   def show
-    
-    
+
+
     @poll = Poll.find(params[:id])
     @options = @poll.options
     @new_option = Option.new(poll_id: @poll.id)
-    
+
     if request.post?
-      option_ids = params[:option_ids].collect {|id| id.to_i} if params[:option_ids]    
+      option_ids = params[:option_ids].collect {|id| id.to_i} if params[:option_ids]
       option_ids.each do |id|
         o = Option.find_by_id(id)
         o.numVotes = o.numVotes+1
