@@ -8271,3 +8271,33 @@ Processing by PollsController#show as HTML
 Completed 200 OK in 72ms (Views: 52.4ms | ActiveRecord: 2.3ms)
 
 
+Started PATCH "/polls/3" for 149.152.23.142 at 2018-12-03 01:15:35 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fKLPVeTh4VlPEURpN7XuLB2YSOl4IZ+AXGf908RH+GupH/6ON7uj4iAiGvIU8mwY99V0M7ibZ4G9R6jACFncEw==", "commit"=>"Update Poll", "id"=>"3"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: poll):
+  
+app/controllers/polls_controller.rb:85:in `poll_params'
+app/controllers/polls_controller.rb:57:in `block in update'
+app/controllers/polls_controller.rb:56:in `update'
+Started PATCH "/polls/3" for 149.152.23.142 at 2018-12-03 01:15:42 +0000
+Cannot render console from 149.152.23.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PollsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fKLPVeTh4VlPEURpN7XuLB2YSOl4IZ+AXGf908RH+GupH/6ON7uj4iAiGvIU8mwY99V0M7ibZ4G9R6jACFncEw==", "option_ids"=>["3", "4"], "commit"=>"Update Poll", "id"=>"3"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/polls_controller.rb:80
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: poll):
+  
+app/controllers/polls_controller.rb:85:in `poll_params'
+app/controllers/polls_controller.rb:57:in `block in update'
+app/controllers/polls_controller.rb:56:in `update'
