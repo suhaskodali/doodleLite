@@ -26,6 +26,28 @@ class PollsController < ApplicationController
       end
     end
   end
+  
+  # PUT/PATCH /polls/1
+  def vote
+    
+      
+
+      if request.patch?
+        option_ids = params[:option_ids] #.collect {|id| id.to_i}
+        option_ids.each do |id|
+          o = Option.find_by_id(id)
+          o.update_attributes(numVotes: (o.numVotes+1))
+        end
+        respond_to do |format|
+            format.html { redirect_to request.referrer, notice: 'Poll was successfully updated.' }
+            format.json { render :show, status: :created, location: request.referrer }
+        end
+      end
+    
+      
+    
+      
+  end
 
   # GET /polls/new
   def new
@@ -87,6 +109,7 @@ class PollsController < ApplicationController
       params.require(:poll).permit(:title, :description, :user_id, :totalVotes)
     end
 
+
     # Confirms a logged-in user.
     def logged_in_user
       unless logged_in?
@@ -103,5 +126,10 @@ class PollsController < ApplicationController
         flash[:danger] = 'You are not authorized to do that.'
         redirect_to(root_url)
       end
+    end
+    
+    def poll_option_id_params
+      params.require(:poll).permit(:option_ids)
+
     end
 end

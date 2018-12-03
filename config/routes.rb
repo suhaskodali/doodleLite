@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post   '/login',    to: 'sessions#create'
   delete '/logout',   to:'sessions#destroy'
   root  'static_pages#home'
+  patch '/polls/id', to: 'polls#vote'
   resources :polls
   resources :users
 

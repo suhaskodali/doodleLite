@@ -28,7 +28,7 @@
   </div>
   
 <h2>Your Poll's Options</h2>
-<%= form_for @poll do |form| %>
+<%= form_for @poll, :url => {:action => "vote"} do |form| %>
  <table width="100%" border="1">
   <thead>
     <tr>
