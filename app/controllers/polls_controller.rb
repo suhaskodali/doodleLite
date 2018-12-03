@@ -1,5 +1,7 @@
 class PollsController < ApplicationController
   before_action :set_poll, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user, only: [:index,:show,:edit, :update]
+  before_action :correct_user, only: [:show,:edit, :update]
   include SessionsHelper
   # GET /polls
   # GET /polls.json
@@ -83,5 +85,23 @@ class PollsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def poll_params
       params.require(:poll).permit(:title, :description, :user_id, :totalVotes)
+    end
+
+    # Confirms a logged-in user.
+    def logged_in_user
+      unless logged_in?
+        store_location
+        flash[:danger] = 'Please log in.'
+        redirect_to login_url
+      end
+    end
+
+    # Confirms the correct user.
+    def correct_user
+      @user = User.find(params[:id])
+      unless @user == current_user
+        flash[:danger] = 'You are not authorized to do that.'
+        redirect_to(root_url)
+      end
     end
 end

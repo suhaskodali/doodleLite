@@ -1,5 +1,8 @@
 class OptionsController < ApplicationController
   before_action :set_option, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user, only: [:index,:show,:edit, :update]
+  before_action :correct_user, only: [:show,:edit, :update]
+  include SessionsHelper
 
   # GET /options
   # GET /options.json
@@ -31,7 +34,7 @@ class OptionsController < ApplicationController
     if !params[:add_option].nil?
       @option.save
       flash[:success] = 'Option added!'
-      redirect_to @option.poll    
+      redirect_to @option.poll
     else
       respond_to do |format|
         if @option.save
@@ -78,5 +81,22 @@ class OptionsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def option_params
       params.require(:option).permit(:poll_id, :name, :numVotes)
+    end
+
+    def logged_in_user
+      unless logged_in?
+        store_location
+        flash[:danger] = 'Please log in.'
+        redirect_to login_url
+      end
+    end
+
+    # Confirms the correct user.
+    def correct_user
+      @user = User.find(params[:id])
+      unless @user == current_user
+        flash[:danger] = 'You are not authorized to do that.'
+        redirect_to(root_url)
+      end
     end
 end

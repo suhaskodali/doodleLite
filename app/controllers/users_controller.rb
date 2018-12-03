@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :passwordConfirm_user, only: [:create]
+  before_action :logged_in_user, only: [:index,:show,:edit, :update]
+  before_action :correct_user, only: [:show,:edit, :update]
   include SessionsHelper
 
   # GET /users
@@ -78,6 +80,23 @@ class UsersController < ApplicationController
     def passwordConfirm_user
       unless params[:password] == params[:password_confirmation]
         flash[:danger] = 'Password Confirmation does not match'
+      end
+    end
+
+    def logged_in_user
+      unless logged_in?
+        store_location
+        flash[:danger] = 'Please log in.'
+        redirect_to login_url
+      end
+    end
+
+    # Confirms the correct user.
+    def correct_user
+      @user = User.find(params[:id])
+      unless @user == current_user
+        flash[:danger] = 'You are not authorized to do that.'
+        redirect_to(root_url)
       end
     end
 end
