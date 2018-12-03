@@ -2,6 +2,14 @@
 
 <h1>Polls</h1>
 
+<%= form_tag(search_path, remote: true, id: "search_form") do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search", name: nil %>
+<% end %>
+<div id="results">
+  <%= render 'results' %>
+</div>
+
 <table>
   <thead>
     <tr>
