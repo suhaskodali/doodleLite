@@ -9,6 +9,7 @@ class PollsController < ApplicationController
     @polls = Poll.all
   end
 
+
   # GET /polls/1
   # GET /polls/1.json
   def show
@@ -26,11 +27,11 @@ class PollsController < ApplicationController
       end
     end
   end
-  
+
   # PUT/PATCH /polls/1
   def vote
-    
-      
+
+
 
       if request.patch?
         option_ids = params[:option_ids] #.collect {|id| id.to_i}
@@ -43,10 +44,10 @@ class PollsController < ApplicationController
             format.json { render :show, status: :created, location: request.referrer }
         end
       end
-    
-      
-    
-      
+
+
+
+
   end
 
   # GET /polls/new
@@ -127,7 +128,7 @@ class PollsController < ApplicationController
         redirect_to(root_url)
       end
     end
-    
+
     def poll_option_id_params
       params.require(:poll).permit(:option_ids)
 
