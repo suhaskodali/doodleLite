@@ -9,7 +9,6 @@ class PollsController < ApplicationController
     @polls = Poll.all
   end
 
-
   # GET /polls/1
   # GET /polls/1.json
   def show
